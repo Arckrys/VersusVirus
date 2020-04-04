@@ -126,31 +126,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/priceTag" /><![CDATA[ layout/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ]]>
+        app:layout_constraintTop_toBottomOf="@+id/priceTag" /> 
 
     <ImageView
         android:id="@+id/imageView4"
