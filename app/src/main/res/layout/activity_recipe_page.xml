@@ -10,14 +10,10 @@
     android:layout_width="match_parent">
 
 
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,14 +115,6 @@
         app:layout_constraintStart_toStartOf="@+id/priceTitle"
         app:layout_constraintTop_toBottomOf="@+id/priceTitle" />
 
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/priceTag"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <Button
         android:id="@+id/joinButton"
         android:layout_width="match_parent"
@@ -138,7 +126,62 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/priceTag" />
+        app:layout_constraintTop_toBottomOf="@+id/priceTag" /><![CDATA[ layout/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ]]>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="54dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/language"
+        app:layout_constraintRight_toRightOf="@+id/eventDateTitle"
+        app:layout_constraintTop_toBottomOf="@+id/language"
+        app:layout_goneMarginLeft="500dp"
+        app:layout_goneMarginRight="20dp"
+        app:srcCompat="@drawable/flagfr" />
+
+    <TextView
+        android:id="@+id/language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:text="Language"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SpicesList" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nextRecipeBy"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/recipeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/recipeTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

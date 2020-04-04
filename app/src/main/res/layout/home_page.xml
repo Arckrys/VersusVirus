@@ -11,8 +11,56 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25sp"
+        android:timeZone="Europe/Paris"
+        android:format24Hour="hh:mm a"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/flagFr"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintRight_toLeftOf="@id/myProfileTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/flagfr" />
+
+    <ImageView
+        android:id="@+id/flagEn"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintRight_toLeftOf="@id/flagFr"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/flagen" />
+
+    <ImageView
+        android:id="@+id/flagGe"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintRight_toLeftOf="@id/flagEn"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/flagge" />
+
+    <ImageView
+        android:id="@+id/flagIt"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintRight_toLeftOf="@id/flagGe"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/flagit" />
+
 
     <TextView
         android:id="@+id/nextRecipeTextView"

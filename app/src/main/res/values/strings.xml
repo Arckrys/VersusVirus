@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VersusVirus</string>
+    <string name="app_name">SocialCookingApp</string>
     <string name="bonjour">Hello</string>
     <string name="forgot_your_password">Forgot your password ?</string>
     <string name="application_logo">Application logo</string>
@@ -20,10 +20,11 @@
     <string name="event_date">Event Date</string>
     <string name="price">Price</string>
     <string name="spices">Spices</string>
-    <string name="ingredientList">2 tbsp olive oil 4-6 skin-on, bone-in chicken thighs 1 onion 2 garlic cloves 250ml red wine 2 x 400g cans cherry tomatoes 1 chicken stock cube 1 tbsp balsamic vinegar</string>
-    <string name="spiceList">2 bay leaves 4 thyme sprigs 2 rosemary sprigs small bunch of parsley 2 tbsp capers</string>
+    <string name="ingredientList">2 tbsp olive oil \n 4-6 skin-on, bone-in chicken thighs \n 1 onion \n 2 garlic cloves \n 250ml red wine \n 2 x 400g cans cherry tomatoes \n 1 chicken stock cube \n 1 tbsp balsamic vinegar</string>
+    <string name="spiceList">2 bay leaves \n 4 thyme sprigs \n 2 rosemary sprigs \n small bunch of parsley \n 2 tbsp capers</string>
     <string name="eventDate"><![CDATA[Apr. 5 -> 17:00]]></string>
     <string name="priceQty">$$$$</string>
     <string name="join_the_event">Join the kitchen</string>
     <string name="username">CookingAdmin</string>
+    <string name="language">language</string>
 </resources>
