@@ -44,12 +44,12 @@ public class DatabaseManager {
                 }
                 System.out.println("<MSG> Request ok ");
                 // Check password
-                if(password != user.password) {
-                    System.out.println("<MSG> <ERROR> password does not match : " +
-                            user.password + " " + password);
+                if(!password.equals(user.password)) {
+                    System.out.println("<MSG> <ERROR> password does not match : ");
                     return;
                 }
 
+                // Change the activity => GO TO HOMEPAGE
                 Intent intent = new Intent(context, Homepage.class);
                 context.startActivity(intent);
             }
