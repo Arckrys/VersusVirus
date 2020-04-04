@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">VersusVirus</string>
+    <string name="app_name">SocialCookingApp</string>
     <string name="bonjour">Bonjour</string>
     <string name="email">Email</string>
     <string name="connexion">Connexion</string>
@@ -11,6 +11,20 @@
     <string name="application_logo">Logo de l\'appp</string>
     <string name="myProfile">Mon Profile</string>
     <string name="search">Recherche</string>
-    <string name="nextRecipeTitle">Chicken cacciatore</string>
-    <string name="nextRecipeName">Chicken cacciatore</string>
+    <string name="nextRecipeName">Poulet Chasseur</string>
+    <string name="your_next_recipe">Prochaine Recette</string>
+    <string name="nextRecipeBy">Par Eric Smith</string>
+    <string name="upcoming_events">Evènements à venir</string>
+    <string name="back">Retour</string>
+    <string name="recipeTitle">One pot Poulet Chasseur</string>
+    <string name="main_ingredients">Ingredients</string>
+    <string name="event_date">Date</string>
+    <string name="price">Prix</string>
+    <string name="spices">Epices</string>
+    <string name="ingredientList">2 cuillères à soupe d\'huile d\'olive 4 à 6 cuisses de poulet avec peau, avec os 1 oignon 2 gousses d\'ail 250 ml de vin rouge 2 boîtes de 400 g de tomates cerises 1 cube de bouillon de volaille 1 cuillère à soupe de vinaigre balsamique</string>
+    <string name="spiceList">2 feuilles de laurier 4 brins de thym 2 brins de romarin petit bouquet de persil 2 cuillères à soupe de câpres</string>
+    <string name="eventDate"><![CDATA[Apr. 5 -> 17:00]]></string>
+    <string name="priceQty">$$$$</string>
+    <string name="join_the_event">Rejoindre l\'évènement</string>
+    <string name="username">CuisinierAdministrateur</string>
 </resources>
