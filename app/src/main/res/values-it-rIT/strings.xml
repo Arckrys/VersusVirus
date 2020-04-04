@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VersusVirus</string>
+    <string name="bonjour">Ciao</string>
+    <string name="forgot_your_password">Password dimenticata</string>
+    <string name="application_logo">Logo dell\'applicazione</string>
+    <string name="create_an_account">creare un conto</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="connexion">Connesione</string>
+    <string name="myname">" Jason Smith"</string>
+    <string name="myProfile">Il mio profilo</string>
+    <string name="search">Cerca</string>
+    <string name="nextRecipeName">Pollo cacciatore</string>
+    <string name="your_next_recipe">La tua prossima ricetta</string>
+    <string name="nextRecipeBy">by Eric Smith</string>
+    <string name="upcoming_events">prossimi eventi</string>
+    <string name="back">indietro</string>
+    <string name="recipeTitle">Pollo cacciatore una porzione</string>
+    <string name="main_ingredients">Ingredienti principali</string>
+    <string name="event_date">Data dell\'evento</string>
+    <string name="price">Prezzo</string>
+    <string name="spices">Spezie</string>
+    <string name="ingredientList">2 tbsp olive oil 4-6 skin-on, bone-in chicken thighs 1 onion 2 garlic cloves 250ml red wine 2 x 400g cans cherry tomatoes 1 chicken stock cube 1 tbsp balsamic vinegar</string>
+    <string name="spiceList">2 bay2 bay leaves 4 thyme sprigs 2 rosemary sprigs small bunch of parsley 2 tbsp capers 4 thyme sprigs 2 rosemary sprigs small bunch of parsley 2 tbsp capers</string>
+    <string name="eventDate"><![CDATA[Apr. 5 -> 17:00]]></string>
+    <string name="priceQty">$$$$</string>
+    <string name="join_the_event">"Raggiungi evento "</string>
+    <string name="username">Amministratore cucina</string>
+</resources>
