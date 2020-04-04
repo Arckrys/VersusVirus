@@ -13,6 +13,8 @@ import android.widget.ImageView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
@@ -33,16 +35,23 @@ public class RecipePage extends AppCompatActivity {
 
 
         testStorage();
+        testDatabase();
+    }
+
+    private void testDatabase() {
+        // https://firebase.google.com/docs/database/android/start
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference liveSessions = database.getReference("live_session");
+
     }
 
     private void testStorage() {
         // Create the storage
         FirebaseStorage storage = FirebaseStorage.getInstance();
-
         // https://firebase.google.com/docs/storage/android/create-reference
         // Create the reference singleton instance
         StorageReference storageRef = storage.getReference();
-
         // Create reference to recipe images
         // recipe images are in the folder /img/recipe/
         StorageReference recipeRef = storageRef.child("img/recipe");
@@ -56,7 +65,11 @@ public class RecipePage extends AppCompatActivity {
                 new OnSuccessListener<byte[]>() {
                     @Override
                     public void onSuccess(byte[] bytes) {
+                        // This loads the image into memory
+                        // This would be better to store the images into a temporary file
+                        // and load it from there
                         Bitmap img = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                        // Display the image from memory
                         ImageView imgView = findViewById(R.id.imageView);
                         imgView.setImageBitmap(img);
                     }
