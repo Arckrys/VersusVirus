@@ -15,16 +15,16 @@ public class LoginPage extends AppCompatActivity {
 
     public class Ingredient{
         public Integer Id_ingredient;
-        Double Quantity;
-        String Quantifier, Type, name;
+        public Double Quantity;
+        public String Quantifier, Type, name;
 
     }
     public class  Recipe{
         public Integer Id_Recipe,prepTim,cookTime,difficulty;
         public String image,title, Language,description;
-        Timestamp Date;
-        List<Ingredient> Ingredients;
-        List<String> Steps;
+        public Timestamp Date;
+        public List<Ingredient> Ingredients;
+        public List<String> Steps;
 
 
     }
