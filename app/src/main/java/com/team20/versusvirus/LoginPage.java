@@ -34,15 +34,10 @@ public class LoginPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
 
-
         Button connexionButton = findViewById(R.id.connexionButton);
         connexionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*
-                Intent intent = new Intent(LoginPage.this, Homepage.class);
-                startActivity(intent);
-                 */
                 EditText username = findViewById(R.id.emailEditText);
                 EditText pwd = findViewById(R.id.passwordEditText);
                 // Fetch username in database and change activity if succeded
@@ -64,42 +59,5 @@ public class LoginPage extends AppCompatActivity {
                 dbmanager.writeUser(user);
             }
         });
-    }
-
-    private void testAccessDatabase() {
-        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
-        DatabaseReference usersRef = mDatabase.child("users");
-
-        String userId = "jeanmi";
-
-
-        // WRITE IN DATABASE
-        /*
-        List<String> list = Arrays.asList(new String[]{"foo", "bar"});
-        User user = new User("Jean-Michel", "J'aime la choucroute", list);
-        usersRef.child(userId).setValue(user);
-         */
-        /*
-        ValueEventListener listener = new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                User user = dataSnapshot.getValue(User.class);
-                EditText edit = findViewById(R.id.emailEditText);
-                edit.setText(user.name);
-                System.out.println("<MSG> Should work");
-                System.out.println(user.description);
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                System.out.println("<MSG> This did not work");
-            }
-        };
-
-        DatabaseReference userRef = usersRef.child(userId);
-        userRef.addListenerForSingleValueEvent(listener);
-        */
-
-
     }
 }

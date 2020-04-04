@@ -18,6 +18,7 @@ public class ProfilPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profil_page);
 
+        // ========= RETRIEVE USER INSTANCE
         Gson gson = new Gson();
         final User user = gson.fromJson(getIntent().getStringExtra("user"), User.class);
 
@@ -26,8 +27,9 @@ public class ProfilPage extends AppCompatActivity {
         textViewUsername.setText(user.name);
         EditText editTextDesc = findViewById(R.id.editText);
         editTextDesc.setText(user.description);
-        
 
+
+        // ========= CHANGE ACTIVITY
         Button backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override

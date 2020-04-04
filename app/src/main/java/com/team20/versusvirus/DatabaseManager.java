@@ -38,16 +38,15 @@ public class DatabaseManager {
         ValueEventListener listener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                System.out.println("<MSG> Request ok");
                 User user = dataSnapshot.getValue(User.class);
                 if(user == null) {
-                    Toast.makeText(context, "<MSG> user does not exist", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "The user does not exist :(", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 System.out.println("<MSG> Request ok ");
                 // Check password
                 if(!password.equals(user.password)) {
-                    Toast.makeText(context, "<MSG> <ERROR> password does not match : ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Wrong password !", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -62,7 +61,7 @@ public class DatabaseManager {
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                System.out.println("<MSG> This was cancelled");
+                Toast.makeText(context, "The login request was cancelled", Toast.LENGTH_SHORT).show();
             }
         };
 
