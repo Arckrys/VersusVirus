@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "354553673175",
+    "firebase_url": "https://versusvirus-f9b08.firebaseio.com",
+    "project_id": "versusvirus-f9b08",
+    "storage_bucket": "versusvirus-f9b08.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354553673175:android:92293471dbf90352c2c792",
+        "android_client_info": {
+          "package_name": "com.team20.versusvirus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354553673175-2af635i1nqfh8po4fn9899ukic1f38s8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCp6T1_JVJOUzVf_anr_WwoDxbNayvtGog"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "354553673175-2af635i1nqfh8po4fn9899ukic1f38s8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
