@@ -13,4 +13,6 @@
     <string name="search">Recherche</string>
     <string name="nextRecipeTitle">Chicken cacciatore</string>
     <string name="nextRecipeName">Chicken cacciatore</string>
+    <string name="join_the_event">Rejoindre la cuisine</string>
+    <string name="nextRecipeBy">by Heidi Bloch</string>
 </resources>

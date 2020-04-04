@@ -13,7 +13,7 @@
     <string name="search">Cerca</string>
     <string name="nextRecipeName">Pollo cacciatore</string>
     <string name="your_next_recipe">La tua prossima ricetta</string>
-    <string name="nextRecipeBy">by Eric Smith</string>
+    <string name="nextRecipeBy">byHeidi Block</string>
     <string name="upcoming_events">prossimi eventi</string>
     <string name="back">indietro</string>
     <string name="recipeTitle">Pollo cacciatore una porzione</string>
@@ -25,6 +25,6 @@
     <string name="spiceList">2 bay2 bay leaves 4 thyme sprigs 2 rosemary sprigs small bunch of parsley 2 tbsp capers 4 thyme sprigs 2 rosemary sprigs small bunch of parsley 2 tbsp capers</string>
     <string name="eventDate"><![CDATA[Apr. 5 -> 17:00]]></string>
     <string name="priceQty">$$$$</string>
-    <string name="join_the_event">"Raggiungi evento "</string>
+    <string name="join_the_event">"Raggiungi cucina "</string>
     <string name="username">Amministratore cucina</string>
 </resources>

@@ -32,10 +32,10 @@ public class RecipePage extends AppCompatActivity {
         });
 
 
-        testStorage();
+        //testStorage();
     }
 
-    private void testStorage() {
+    /*private void testStorage() {
         // Create the storage
         FirebaseStorage storage = FirebaseStorage.getInstance();
 
@@ -70,5 +70,5 @@ public class RecipePage extends AppCompatActivity {
                 }
         );
 
-    }
+    }*/
 }
