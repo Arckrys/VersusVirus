@@ -6,6 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import com.google.gson.Gson;
 
 public class ProfilPage extends AppCompatActivity {
 
@@ -13,6 +17,17 @@ public class ProfilPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profil_page);
+
+        Gson gson = new Gson();
+        final User user = gson.fromJson(getIntent().getStringExtra("user"), User.class);
+
+        // ========= UPDATE USER INFORMATION
+        TextView textViewUsername = findViewById(R.id.textView);
+        textViewUsername.setText(user.name);
+        EditText editTextDesc = findViewById(R.id.editText);
+        editTextDesc.setText(user.description);
+        
+
         Button backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override

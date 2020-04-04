@@ -58,12 +58,6 @@ public class DatabaseManager {
                 String jsonUser = gson.toJson(user);
                 intent.putExtra("user", jsonUser);
                 context.startActivity(intent);
-
-                /*
-                Gson gson = new Gson();
-                String myJson = gson.toJson(vp);
-                intent.putExtra("myjson", myjson);
-                 */
             }
 
             @Override
