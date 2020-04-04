@@ -7,9 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.squareup.picasso.Picasso;
 
 public class ProfilPage extends AppCompatActivity {
 
@@ -28,6 +30,9 @@ public class ProfilPage extends AppCompatActivity {
         EditText editTextDesc = findViewById(R.id.editText);
         editTextDesc.setText(user.description);
 
+        ImageView imageView = findViewById(R.id.imageView);
+        // THIS MAKES THE APP CRASH !!!!
+        //Picasso.get().load(user.photo).into(imageView);
 
         // ========= CHANGE ACTIVITY
         Button backButton = findViewById(R.id.backButton);

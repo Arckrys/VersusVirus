@@ -41,7 +41,7 @@
         android:id="@+id/emailTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/email"
+        android:text="Username"
         android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@+id/createAccountText"
         app:layout_constraintEnd_toEndOf="parent"
