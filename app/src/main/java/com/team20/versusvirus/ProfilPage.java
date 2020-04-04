@@ -29,5 +29,13 @@ public class ProfilPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button shoppingListButton = findViewById(R.id.ingredientListButton);
+        shoppingListButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfilPage.this, ShoppingList.class);
+                startActivity(intent);
+            }
+        });
     }
 }
