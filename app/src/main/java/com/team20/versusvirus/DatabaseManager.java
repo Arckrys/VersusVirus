@@ -15,6 +15,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.gson.Gson;
 
 import java.security.Timestamp;
 import java.util.List;
@@ -51,8 +52,18 @@ public class DatabaseManager {
                 }
 
                 // Change the activity => GO TO HOMEPAGE
+                // We pass a user instance as a json-formatted string
                 Intent intent = new Intent(context, Homepage.class);
+                Gson gson = new Gson();
+                String jsonUser = gson.toJson(user);
+                intent.putExtra("user", jsonUser);
                 context.startActivity(intent);
+
+                /*
+                Gson gson = new Gson();
+                String myJson = gson.toJson(vp);
+                intent.putExtra("myjson", myjson);
+                 */
             }
 
             @Override
