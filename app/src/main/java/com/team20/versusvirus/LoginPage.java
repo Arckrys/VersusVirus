@@ -43,7 +43,8 @@ public class LoginPage extends AppCompatActivity {
                 Intent intent = new Intent(LoginPage.this, Homepage.class);
                 startActivity(intent);
                  */
-                //testAccessDatabase();
+                User jeanmi = dbmanager.getUser("jeanmi");
+                System.out.println(jeanmi.description);
             }
         });
 

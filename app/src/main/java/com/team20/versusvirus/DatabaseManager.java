@@ -26,10 +26,12 @@ public class DatabaseManager {
     // ===================== SAVE USER INTO DATABASE
     public User currentUser;
     public User getUser(String username) {
+        System.out.println("<MSG>"+ username);
         ValueEventListener listener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 currentUser = dataSnapshot.getValue(User.class);
+                System.out.println("<MSG>"+ currentUser.description);
             }
 
             @Override
