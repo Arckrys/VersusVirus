@@ -3,6 +3,7 @@ package com.team20.versusvirus;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
@@ -39,13 +40,13 @@ public class DatabaseManager {
                 System.out.println("<MSG> Request ok");
                 User user = dataSnapshot.getValue(User.class);
                 if(user == null) {
-                    System.out.println("<MSG> user does not exist");
+                    Toast.makeText(context, "<MSG> user does not exist", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 System.out.println("<MSG> Request ok ");
                 // Check password
                 if(!password.equals(user.password)) {
-                    System.out.println("<MSG> <ERROR> password does not match : ");
+                    Toast.makeText(context, "<MSG> <ERROR> password does not match : ", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
