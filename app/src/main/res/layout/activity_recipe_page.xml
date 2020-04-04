@@ -10,15 +10,14 @@
     android:layout_width="match_parent">
 
 
-
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
         android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/next_recipe_image" />
 
     <TextView
@@ -116,15 +115,6 @@
         app:layout_constraintStart_toStartOf="@+id/priceTitle"
         app:layout_constraintTop_toBottomOf="@+id/priceTitle" />
 
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_width="190dp"
-        android:layout_height="33dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toBottomOf="@+id/priceTag"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <Button
         android:id="@+id/joinButton"
         android:layout_width="match_parent"
@@ -158,6 +148,8 @@
 
 
 
+
+
     ]]>
 
     <ImageView
@@ -165,12 +157,12 @@
         android:layout_width="54dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/language"
+        app:layout_constraintEnd_toEndOf="@+id/language"
         app:layout_constraintRight_toRightOf="@+id/eventDateTitle"
+        app:layout_constraintTop_toBottomOf="@+id/language"
         app:layout_goneMarginLeft="500dp"
         app:layout_goneMarginRight="20dp"
-        app:srcCompat="@drawable/flagfr"
-        tools:layout_editor_absoluteX="317dp" />
+        app:srcCompat="@drawable/flagfr" />
 
     <TextView
         android:id="@+id/language"
@@ -187,8 +179,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/nextRecipeBy"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="305dp" />
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/recipeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/recipeTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
