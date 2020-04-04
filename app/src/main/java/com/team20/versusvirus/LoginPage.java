@@ -50,6 +50,11 @@ public class LoginPage extends AppCompatActivity {
         createAccountText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // TODO: should start the ResigtrationPage activity and move the content below in it
+                // You should also change the targeted activity in DatabaseManager line 62
+                // Note that the targeted activity will be transmitted a json-formatted string for the user !
+
+                // Create hard-coded user, this will be replaced when we'll have registration page
                 User user = new User(
                         "C'est gourmant, c'est crocant.", "",
                         "cyril", "", "Cyril Lignac", "01.01.1990",
@@ -57,6 +62,12 @@ public class LoginPage extends AppCompatActivity {
                         "French"
 
                 );
+
+                // Check if user exists
+                // If the user exists, we will restart the activity and send the current information
+                // on the user (we can retrieve all information, no need to type everything again)
+                dbmanager.getUser(LoginPage.this, user.username, "", true);
+
                 dbmanager.writeUser(user);
             }
         });

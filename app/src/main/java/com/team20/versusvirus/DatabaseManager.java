@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.TaskCompletionSource;
@@ -35,6 +36,10 @@ public class DatabaseManager {
 
     // ====================== GET USER FROM DATABASE & CHANGE ACTIVITY
     public void getUser(final Context context, String username, final String password) {
+        getUser(context, username, password, false);
+    }
+
+    public void getUser(final Context context, String username, final String password, final Boolean checkExists) {
         ValueEventListener listener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -50,9 +55,15 @@ public class DatabaseManager {
                     return;
                 }
 
-                // Change the activity => GO TO HOMEPAGE
+                // Change the activity: go to homepage, except if we just wanted to check if user existed
+                Intent intent;
+                if(checkExists) {
+                    // TODO: Should replace LoginPage with RegistrationPage !!!!!!
+                    intent = new Intent(context, LoginPage.class);
+                    Toast.makeText(context, "The user already exists !", Toast.LENGTH_SHORT).show();
+                } else
+                    intent = new Intent(context, Homepage.class);
                 // We pass a user instance as a json-formatted string
-                Intent intent = new Intent(context, Homepage.class);
                 Gson gson = new Gson();
                 String jsonUser = gson.toJson(user);
                 intent.putExtra("user", jsonUser);
