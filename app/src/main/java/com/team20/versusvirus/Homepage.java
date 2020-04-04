@@ -1,12 +1,11 @@
 package com.team20.versusvirus;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Homepage extends AppCompatActivity {
 
@@ -46,5 +45,8 @@ public class Homepage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }
-}
+        ImageView flagFrance = findViewById(R.id.flagFr);
+        ImageView flagGermany = findViewById(R.id.flagGe);
+        final ImageView flagItaly = findViewById(R.id.flagIt);
+        final ImageView flagUK = findViewById(R.id.flagEn);
+    }}
