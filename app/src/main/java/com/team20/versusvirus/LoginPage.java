@@ -23,33 +23,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
 
+import com.team20.versusvirus.DatabaseManager;
+
 public class LoginPage extends AppCompatActivity {
 
-    public class Ingredient{
-        public Integer id_ingredient;
-        public Double quantity;
-        public String quantifier, type, name;
-        public Ingredient() {}
-    }
-    public class  Recipe{
-        public Integer id_Recipe,prepTim,cookTime,difficulty;
-        public String image,title, language,description;
-        public Timestamp date;
-        public List<Ingredient> ingredients;
-        public List<String> steps;
-        public Recipe() {}
-    }
-    public class User{
-        public String description, password, username, email, name, birthday, photo, language;
-        public List<Recipe> upcomingRecipe, createdRecipe, pastRecipe;
-        public List<String> friends_id;
-        public User() {}
-    }
+    private DatabaseManager dbmanager = new DatabaseManager();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
+
+
         Button connexionButton = findViewById(R.id.connexionButton);
         connexionButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +43,7 @@ public class LoginPage extends AppCompatActivity {
                 Intent intent = new Intent(LoginPage.this, Homepage.class);
                 startActivity(intent);
                  */
-                testAccessDatabase();
+                //testAccessDatabase();
             }
         });
 
@@ -66,7 +51,12 @@ public class LoginPage extends AppCompatActivity {
         createAccountText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                User user = new User(
+                        "J'aime la choucroute", "123456789",
+                        "jeanmi", "jeanmi@email.com", "Jean-michel", "01.01.1990",
+                        "", "francé"
+                );
+                dbmanager.writeUser(user);
             }
         });
     }
@@ -84,7 +74,7 @@ public class LoginPage extends AppCompatActivity {
         User user = new User("Jean-Michel", "J'aime la choucroute", list);
         usersRef.child(userId).setValue(user);
          */
-
+        /*
         ValueEventListener listener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -103,7 +93,7 @@ public class LoginPage extends AppCompatActivity {
 
         DatabaseReference userRef = usersRef.child(userId);
         userRef.addListenerForSingleValueEvent(listener);
-
+        */
 
 
     }
