@@ -59,6 +59,7 @@ public class LoginPage extends AppCompatActivity {
                         "J'aime la choucroute", "",
                         "dummy", "dummy@dummy.com", "Dummy", "01.01.1990",
                         "", ""
+
                 );
                 dbmanager.writeUser(user);
             }
