@@ -26,25 +26,26 @@ import java.util.Arrays;
 public class LoginPage extends AppCompatActivity {
 
     public class Ingredient{
-        public Integer Id_ingredient;
-        public Double Quantity;
-        public String Quantifier, Type, name;
-
+        public Integer id_ingredient;
+        public Double quantity;
+        public String quantifier, type, name;
+        public Ingredient() {}
     }
     public class  Recipe{
-        public Integer Id_Recipe,prepTim,cookTime,difficulty;
-        public String image,title, Language,description;
-        public Timestamp Date;
-        public List<Ingredient> Ingredients;
-        public List<String> Steps;
-
-
+        public Integer id_Recipe,prepTim,cookTime,difficulty;
+        public String image,title, language,description;
+        public Timestamp date;
+        public List<Ingredient> ingredients;
+        public List<String> steps;
+        public Recipe() {}
     }
     public class User{
-        public String description, Password, username, email, name, birthday, Photo, Langue;
-        public List<Recipe> UpcomingRecipe, CreatedRecipe, PastRecipe;
-        public List<String> Friends_id;
+        public String description, password, username, email, name, birthday, photo, language;
+        public List<Recipe> upcomingRecipe, createdRecipe, pastRecipe;
+        public List<String> friends_id;
+        public User() {}
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
