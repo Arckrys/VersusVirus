@@ -56,9 +56,9 @@ public class LoginPage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 User user = new User(
-                        "J'aime la choucroute", "123456789",
-                        "jeanmi", "jeanmi@email.com", "Jean-michel", "01.01.1990",
-                        "", "francé"
+                        "J'aime la choucroute", "",
+                        "dummy", "dummy@dummy.com", "Dummy", "01.01.1990",
+                        "", ""
                 );
                 dbmanager.writeUser(user);
             }
