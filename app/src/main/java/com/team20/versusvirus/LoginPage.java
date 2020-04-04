@@ -43,7 +43,11 @@ public class LoginPage extends AppCompatActivity {
                 Intent intent = new Intent(LoginPage.this, Homepage.class);
                 startActivity(intent);
                  */
-                dbmanager.getUser("jeanmi");
+                EditText username = findViewById(R.id.emailEditText);
+                EditText pwd = findViewById(R.id.passwordEditText);
+                // Fetch username in database and change activity if succeded
+                dbmanager.getUser(LoginPage.this,
+                        username.getText().toString(), pwd.getText().toString());
             }
         });
 
