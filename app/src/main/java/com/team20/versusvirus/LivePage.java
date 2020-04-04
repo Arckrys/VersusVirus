@@ -27,7 +27,7 @@ public class LivePage extends YouTubeBaseActivity {
                                                         YouTubePlayer youTubePlayer, boolean b) {
 
                         // do any work here to cue video, play video, etc.
-                        youTubePlayer.cueVideo("a4NT5iBFuZs");
+                        youTubePlayer.cueVideo("dSlFdRzFHQU");
                     }
 
                     @Override

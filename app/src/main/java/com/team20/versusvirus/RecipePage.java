@@ -34,8 +34,8 @@ public class RecipePage extends AppCompatActivity {
         });
 
 
-        testStorage();
-        testDatabase();
+        //testStorage();
+        //testDatabase();
     }
 
     private void testDatabase() {
@@ -46,7 +46,7 @@ public class RecipePage extends AppCompatActivity {
 
     }
 
-    private void testStorage() {
+    /*private void testStorage() {
         // Create the storage
         FirebaseStorage storage = FirebaseStorage.getInstance();
         // https://firebase.google.com/docs/storage/android/create-reference
@@ -83,5 +83,5 @@ public class RecipePage extends AppCompatActivity {
                 }
         );
 
-    }
+    }*/
 }

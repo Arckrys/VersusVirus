@@ -9,6 +9,7 @@ import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.firebase.FirebaseError;
 import com.google.firebase.database.DataSnapshot;
@@ -17,12 +18,33 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.security.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
 
 public class LoginPage extends AppCompatActivity {
 
+    public class Ingredient{
+        public Integer Id_ingredient;
+        public Double Quantity;
+        public String Quantifier, Type, name;
+
+    }
+    public class  Recipe{
+        public Integer Id_Recipe,prepTim,cookTime,difficulty;
+        public String image,title, Language,description;
+        public Timestamp Date;
+        public List<Ingredient> Ingredients;
+        public List<String> Steps;
+
+
+    }
+    public class User{
+        public String description, Password, username, email, name, birthday, Photo, Langue;
+        public List<Recipe> UpcomingRecipe, CreatedRecipe, PastRecipe;
+        public List<String> Friends_id;
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +58,14 @@ public class LoginPage extends AppCompatActivity {
                 startActivity(intent);
                  */
                 testAccessDatabase();
+            }
+        });
+
+        TextView createAccountText = findViewById(R.id.createAccountText);
+        createAccountText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }
