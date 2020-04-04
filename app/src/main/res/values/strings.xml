@@ -14,4 +14,16 @@
     <string name="your_next_recipe">Your next recipe</string>
     <string name="nextRecipeBy">by Eric Smith</string>
     <string name="upcoming_events">Upcoming events</string>
+    <string name="back">Back</string>
+    <string name="recipeTitle">Chicken cacciatore one-pot</string>
+    <string name="main_ingredients">Main ingredients</string>
+    <string name="event_date">Event Date</string>
+    <string name="price">Price</string>
+    <string name="spices">Spices</string>
+    <string name="ingredientList">2 tbsp olive oil 4-6 skin-on, bone-in chicken thighs 1 onion 2 garlic cloves 250ml red wine 2 x 400g cans cherry tomatoes 1 chicken stock cube 1 tbsp balsamic vinegar</string>
+    <string name="spiceList">2 bay leaves 4 thyme sprigs 2 rosemary sprigs small bunch of parsley 2 tbsp capers</string>
+    <string name="eventDate"><![CDATA[Apr. 5 -> 17:00]]></string>
+    <string name="priceQty">$$$$</string>
+    <string name="join_the_event">Join the event</string>
+    <string name="username">CookingAdmin</string>
 </resources>

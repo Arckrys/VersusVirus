@@ -39,7 +39,7 @@
         android:id="@+id/myNameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/myname"
+        android:text="@string/username"
         android:textSize="18sp"
         app:layout_constraintStart_toEndOf="@+id/profileImage"
         app:layout_constraintTop_toTopOf="@+id/profileImage" />
