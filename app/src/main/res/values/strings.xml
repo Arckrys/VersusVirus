@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">VersusVirus</string>
     <string name="bonjour">Hello</string>
+    <string name="forgot_your_password">Forgot your password ?</string>
+    <string name="application_logo">Application logo</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="connexion">Connexion</string>
+    <string name="myname">Jason Smith</string>
+    <string name="myProfile">My profile</string>
+    <string name="search">Search</string>
+    <string name="nextRecipeName">Chicken cacciatore</string>
+    <string name="your_next_recipe">Your next recipe</string>
+    <string name="nextRecipeBy">by Eric Smith</string>
+    <string name="upcoming_events">Upcoming events</string>
 </resources>

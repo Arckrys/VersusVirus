@@ -2,4 +2,15 @@
 <resources>
     <string name="app_name">VersusVirus</string>
     <string name="bonjour">Bonjour</string>
+    <string name="email">Email</string>
+    <string name="connexion">Connexion</string>
+    <string name="myname">Jean Dupond</string>
+    <string name="forgot_your_password">Mot de passe oublié ?</string>
+    <string name="create_an_account">Créer un compte</string>
+    <string name="password">Mot de passe</string>
+    <string name="application_logo">Logo de l\'appp</string>
+    <string name="myProfile">Mon Profile</string>
+    <string name="search">Recherche</string>
+    <string name="nextRecipeTitle">Chicken cacciatore</string>
+    <string name="nextRecipeName">Chicken cacciatore</string>
 </resources>

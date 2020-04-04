@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecipePage">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/next_recipe_image" />
+
+    <TextView
+        android:id="@+id/recipeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Chicken cacciatore one-pot"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/mainIngredientsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Main ingredients"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipeTitle" />
+
+    <TextView
+        android:id="@+id/eventDateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Main ingredients"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/mainIngredientsTitle"
+        app:layout_constraintTop_toBottomOf="@+id/mainIngredientsList" />
+
+    <TextView
+        android:id="@+id/priceTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Price"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/eventDateTitle"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <TextView
+        android:id="@+id/SpicesTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="25dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Spices"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recipeTitle" />
+
+    <TextView
+        android:id="@+id/mainIngredientsList"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="2 tbsp olive oil\n4-6 skin-on, bone-in chicken thighs\n1 onion\n2 garlic cloves\n250ml red wine\n2 x 400g cans cherry tomatoes\n1 chicken stock cube\n1 tbsp balsamic vinegar"
+        app:layout_constraintStart_toStartOf="@+id/mainIngredientsTitle"
+        app:layout_constraintTop_toBottomOf="@+id/mainIngredientsTitle" />
+
+    <TextView
+        android:id="@+id/SpicesList"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:text="2 bay leaves\n4 thyme sprigs\n2 rosemary sprigs\nsmall bunch of parsley\n2 tbsp capers"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="@+id/SpicesTitle"
+        app:layout_constraintTop_toBottomOf="@+id/mainIngredientsTitle" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Apr. 5 -> 17:00"
+        app:layout_constraintStart_toStartOf="@+id/eventDateTitle"
+        app:layout_constraintTop_toBottomOf="@+id/eventDateTitle" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$$$$"
+        app:layout_constraintEnd_toEndOf="@+id/priceTitle"
+        app:layout_constraintStart_toStartOf="@+id/priceTitle"
+        app:layout_constraintTop_toBottomOf="@+id/priceTitle" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Join the event"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
