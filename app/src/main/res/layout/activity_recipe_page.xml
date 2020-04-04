@@ -126,34 +126,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/priceTag" /><![CDATA[ layout/>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ]]>
+        app:layout_constraintTop_toBottomOf="@+id/priceTag" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/flag"
         android:layout_width="54dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
@@ -182,6 +158,35 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/recipeTitle"
         app:layout_constraintTop_toBottomOf="@+id/recipeTitle" />
+
+    <TextView
+        android:id="@+id/difficultyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="@string/difficulty"
+        app:layout_constraintEnd_toEndOf="@+id/flag"
+        app:layout_constraintRight_toRightOf="@+id/eventDateTitle"
+        app:layout_constraintTop_toBottomOf="@+id/flag"
+        app:layout_goneMarginLeft="500dp"
+        app:layout_goneMarginRight="20dp"
+        />
+
+    <RatingBar
+        android:id="@+id/ratingBar1"
+        style="@style/customRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        app:layout_constraintEnd_toEndOf="@+id/difficultyText"
+
+        app:layout_constraintRight_toRightOf="@+id/eventDateTitle"
+        app:layout_constraintStart_toEndOf="@+id/eventTimestamp"
+        app:layout_constraintTop_toBottomOf="@+id/difficultyText"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
