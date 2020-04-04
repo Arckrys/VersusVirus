@@ -2,6 +2,9 @@ package com.team20.versusvirus;
 
 import androidx.annotation.NonNull;
 
+import com.google.android.gms.tasks.Task;
+import com.google.android.gms.tasks.TaskCompletionSource;
+import com.google.android.gms.tasks.Tasks;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -10,6 +13,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.security.Timestamp;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class DatabaseManager {
     private DatabaseReference database = FirebaseDatabase.getInstance().getReference();
@@ -17,21 +21,25 @@ public class DatabaseManager {
     private DatabaseReference recipeDatabase = database.child("recipes");
 
 
-    // ====================== GET USER FROM DATABASE
+    // ===================== SAVE USER INTO DATABASE
     public void writeUser(User user) {
         String userId = user.username;
         userDatabase.child(userId).setValue(user);
     }
 
-    // ===================== SAVE USER INTO DATABASE
-    public User currentUser;
-    public User getUser(String username) {
-        System.out.println("<MSG>"+ username);
+    // ====================== GET USER FROM DATABASE
+    public void getUser(String username) {
         ValueEventListener listener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                currentUser = dataSnapshot.getValue(User.class);
-                System.out.println("<MSG>"+ currentUser.description);
+                System.out.println("<MSG> Request ok");
+                User user = dataSnapshot.getValue(User.class);
+                if(user == null) {
+                    System.out.println("<MSG> user does not exist");
+                    return;
+                }
+                System.out.println("<MSG> Request ok " + user.description);
+
             }
 
             @Override
@@ -39,10 +47,8 @@ public class DatabaseManager {
                 System.out.println("<MSG> This did not work");
             }
         };
-        DatabaseReference userToFind = userDatabase.child(username);
-        userToFind.addListenerForSingleValueEvent(listener);
 
-        return currentUser;
+        userDatabase.child(username).addListenerForSingleValueEvent(listener);
     }
 
 }
