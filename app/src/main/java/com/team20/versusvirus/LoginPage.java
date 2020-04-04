@@ -58,7 +58,7 @@ public class LoginPage extends AppCompatActivity {
                 User user = new User(
                         "J'aime la choucroute", "123456789",
                         "jeanmi", "jeanmi@email.com", "Jean-michel", "01.01.1990",
-                        "", "francé"
+                        "", "francais"
                 );
                 dbmanager.writeUser(user);
             }
