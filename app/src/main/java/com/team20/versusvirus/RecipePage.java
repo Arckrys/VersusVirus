@@ -34,13 +34,13 @@ public class RecipePage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        /*ratingBar1 = findViewById(R.id.ratingBar1);
+        ratingBar1 = findViewById(R.id.ratingBar1);
         ratingBar1.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
             @Override
             public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
             Toast.makeText(RecipePage.this, "Difficulty: " + (int)rating, Toast.LENGTH_SHORT).show();
             }
-            });*/
+            });
 
     }
 }

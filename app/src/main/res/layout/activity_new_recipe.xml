@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterPage">
+
+    <TextView
+        android:id="@+id/createNewRecipe"
+        android:layout_width="450dp"
+        android:layout_height="wrap_content"
+        android:text="@string/createRecipe"
+        android:background="@color/orange"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/recipeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="@string/recipeName"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColorHint="@color/orange"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createNewRecipe" />
+
+    <EditText
+        android:id="@+id/dateEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="@string/dateEven"
+        android:textColorHint="@color/orange"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintTop_toBottomOf="@+id/recipeName"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteX="-1dp" />
+
+    <EditText
+        android:id="@+id/hourEvent"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="@string/hourEven"
+        android:textColorHint="@color/orange"
+        android:ems="10"
+        android:inputType="time"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="107dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateEvent"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/material"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:textColorHint="@color/orange"
+        android:hint="@string/materialNeeded"
+        app:layout_constraintTop_toBottomOf="@+id/hourEvent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <EditText
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="@string/duration"
+        android:textColorHint="@color/orange"
+        android:ems="10"
+        android:inputType="time"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="107dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/material"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/ingredients"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/ingredients"
+        android:textColorHint="@color/orange"
+        app:layout_constraintTop_toBottomOf="@+id/duration"
+        tools:layout_editor_absoluteX="2dp" />
+
+    <TextView
+        android:id="@+id/difficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/difficulty"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="547dp"
+        android:textColor="@color/orange"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredients" />
+
+    <RatingBar
+        android:id="@+id/ratingBar1"
+        style="@style/customRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        app:layout_constraintLeft_toRightOf="@+id/difficulty"
+        app:layout_constraintTop_toBottomOf="@+id/ingredients" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
