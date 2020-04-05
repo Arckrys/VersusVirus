@@ -40,5 +40,14 @@
     <string name="duration">Temps de préparation</string>
     <string name="ingredients">Ingredients</string>
     <string name="createRecipe">Créer un évèmenent :</string>
+    <string name="usernamestar">nom d\'utilisateur*</string>
+    <string name="nameStar">Nom*</string>
+    <string name="emailStar">Email*</string>
+    <string name="personal_description">Description personnelle</string>
+    <string name="url_photo">photo URL</string>
+    <string name="birthday_dd_mm_yyyy"><Anniversaire JJ/MM/AAAA</string>
+    <string name="select_language">Choisir sa langue</string>
+    <string name="register">s\'enregistrer</string>
+    <string name="password_do_not_use_usual_password_n_we_did_not_set_protection_yet">Mot de Passe* n\'utilisez pas votre mot de passe usuel\n(données non encryptées) </string>
 
 </resources>

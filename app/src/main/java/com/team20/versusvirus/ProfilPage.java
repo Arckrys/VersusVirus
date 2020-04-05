@@ -78,4 +78,4 @@ public class ProfilPage extends AppCompatActivity {
 
     }
     }
-}
+
