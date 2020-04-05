@@ -7,7 +7,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
+
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.gson.Gson;
+
+import org.w3c.dom.Text;
 
 public class RegisterPage extends AppCompatActivity {
 
@@ -23,6 +29,29 @@ public class RegisterPage extends AppCompatActivity {
         final CheckBox itBox = (CheckBox) findViewById(R.id.itBox);
 
         Button registerButton = findViewById(R.id.registerButton);
+
+        TextInputEditText textInputEditTextName = findViewById(R.id.name);
+        TextInputEditText textInputEditTextEmail = findViewById(R.id.email);
+        TextInputEditText textInputEditTextBirthday = findViewById(R.id.birthday);
+        TextInputEditText textInputEditTextDesc = findViewById(R.id.personalDescription);
+        TextInputEditText textInputEditTextUrl = findViewById(R.id.url);
+
+        // ============= RETRIEVE USER
+        Gson gson = new Gson();
+        final User user = gson.fromJson(getIntent().getStringExtra("user"), User.class);
+        if(!(user == null)) {
+            // Is we are provided a User here, that means it already exists in the database
+            textInputEditTextEmail.setText(user.email);
+            textInputEditTextDesc.setText(user.description);
+            textInputEditTextUrl.setText(user.photo);
+            textInputEditTextBirthday.setText(user.birthday);
+            textInputEditTextName.setText(user.name);
+        }
+        else
+            System.out.println("<MSG> the user is null");
+
+        // =============== MANAGE REGISTRATION
+
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,7 +100,6 @@ public class RegisterPage extends AppCompatActivity {
 
             }
 
-
         });
 
 
@@ -98,11 +126,6 @@ public class RegisterPage extends AppCompatActivity {
                 enBox.setChecked(false);
             }
         });
-
-
-
-
-
 
 
     }

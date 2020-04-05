@@ -46,7 +46,7 @@ public class DatabaseManager {
                     Toast.makeText(context, "The user already exists !", Toast.LENGTH_SHORT).show();
                     // We pass a user instance as a json-formatted string
                     Gson gson = new Gson();
-                    String jsonUser = gson.toJson(fetchedUser);
+                    String jsonUser = gson.toJson(user);
                     Intent intent = new Intent(context, RegisterPage.class);
                     intent.putExtra("user", jsonUser);
                     context.startActivity(intent);
