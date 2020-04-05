@@ -25,8 +25,10 @@ public class ProfilPage extends AppCompatActivity {
         final User user = gson.fromJson(getIntent().getStringExtra("user"), User.class);
 
         // ========= UPDATE USER INFORMATION
-        TextView textViewUsername = findViewById(R.id.textView);
-        textViewUsername.setText(user.name);
+        TextView textViewName = findViewById(R.id.nameText);
+        textViewName.setText(user.name);
+        TextView textViewUsername = findViewById(R.id.usernameText);
+        textViewUsername.setText(user.username);
         EditText editTextDesc = findViewById(R.id.editText);
         editTextDesc.setText(user.description);
 
