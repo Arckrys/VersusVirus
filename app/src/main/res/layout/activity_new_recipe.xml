@@ -27,7 +27,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:hint="@string/recipeName"
-
         app:layout_constraintEnd_toEndOf="parent"
         android:textColorHint="@color/orange"
         app:layout_constraintHorizontal_bias="0.0"
@@ -36,7 +35,7 @@
 
     <EditText
         android:id="@+id/dateEvent"
-        android:layout_width="wrap_content"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:hint="@string/dateEven"
@@ -49,7 +48,7 @@
 
     <EditText
         android:id="@+id/hourEvent"
-        android:layout_width="300dp"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:hint="@string/hourEven"

@@ -6,22 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".RegisterPage">
 
+    <TextView
+        android:id="@+id/CreateAccount"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@color/orange"
+        android:text="@string/create_an_account"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
+        android:textColorHint="@color/orange"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/CreateAccount">
+
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/usernamestar" />
+            android:layout_marginTop="10dp"
+            android:hint="@string/usernamestar"
+            android:textColorHint="@color/orange" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/name"
+        android:textColorHint="@color/orange"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/nameStar"
@@ -30,6 +48,7 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/email"
+        android:textColorHint="@color/orange"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/emailStar"
@@ -38,6 +57,7 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/personalDescription"
+        android:textColorHint="@color/orange"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/personal_description"
@@ -46,6 +66,7 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/url"
+        android:textColorHint="@color/orange"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/url_photo"
@@ -54,6 +75,7 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/birthday"
+        android:textColorHint="@color/orange"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/birthday_dd_mm_yyyy"
@@ -62,6 +84,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
+        android:textColorHint="@color/orange"
         android:layout_width="411dp"
         android:layout_height="35dp"
         android:orientation="horizontal"
@@ -73,7 +96,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/select_language" />
+            android:text="@string/select_language"
+            android:textColor="@color/orange"
+            android:textColorHint="@color/orange" />
 
         <CheckBox
             android:id="@+id/enBox"
@@ -112,8 +137,10 @@
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColorHint="@color/orange"
         android:hint="@string/password_do_not_use_usual_password_n_we_did_not_set_protection_yet"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/url" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

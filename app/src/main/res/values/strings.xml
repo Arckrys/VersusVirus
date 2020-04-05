@@ -41,7 +41,6 @@
     <string name="it">IT</string>
     <string name="register">Register</string>
     <string name="password_do_not_use_usual_password_n_we_did_not_set_protection_yet">Password* do not use usual password\n(we did not set protection yet)</string>
-    =======
     <string name="recipeName">Recipe Name</string>
     <string name="dateEven">Event Date (DD/MM/YY)</string>
     <string name="hourEven">Time of the Event (HH:MM)</string>

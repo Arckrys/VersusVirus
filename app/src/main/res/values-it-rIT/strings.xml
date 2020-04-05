@@ -33,7 +33,6 @@
     <string name="en">EN</string>
     <string name="fr">FR</string>
     <string name="it">IT</string>
-    =======
     <string name="recipeName">nome della ricetta</string>
     <string name="dateEven">Data dell\'evento (JJ/MM/AA)</string>
     <string name="hourEven">ora dell\'evento (HH:MM)</string>
