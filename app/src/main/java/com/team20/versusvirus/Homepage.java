@@ -23,6 +23,9 @@ public class Homepage extends AppCompatActivity {
         // ========= UPDATE USER INFORMATION
         TextView textViewUsername = findViewById(R.id.myNameTextView);
         textViewUsername.setText(user.name);
+        if(!user.photo.equals("")){
+            new DownloadImageTask((ImageView) findViewById(R.id.profileImage)).execute(user.photo);
+        }
 
         // ============== SET ACTIONS
         ImageView nextRecipeImage = findViewById(R.id.nextRecipeImage);

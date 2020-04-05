@@ -32,9 +32,9 @@ public class ProfilPage extends AppCompatActivity {
         EditText editTextDesc = findViewById(R.id.editText);
         editTextDesc.setText(user.description);
 
-        ImageView imageView = findViewById(R.id.imageView);
-        // THIS MAKES THE APP CRASH !!!!
-        //Picasso.get().load(user.photo).into(imageView);
+        if(!user.photo.equals("")){
+            new DownloadImageTask((ImageView) findViewById(R.id.profileImage)).execute(user.photo);
+        }
 
         // ========= CHANGE ACTIVITY
         Button backButton = findViewById(R.id.backButton);
