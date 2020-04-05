@@ -59,5 +59,14 @@ public class ProfilPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button createEvent = findViewById(R.id.eventCreationButton);
+        createEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfilPage.this, newRecipeActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

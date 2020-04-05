@@ -30,5 +30,12 @@
     <string name="language">langue</string>
     <string name="difficulty">difficulté</string>
     <string name="userLogIn">Utilisateur</string>
+    <string name="recipeName">Nom de la recette</string>
+    <string name="dateEven">Date de l\'évènement (JJ/MM/AA)</string>
+    <string name="hourEven">Heure de l\'evènement (HH:MM)</string>
+    <string name="materialNeeded">Materiel nécesseraire (four, mixer…)</string>
+    <string name="duration">Temps de préparation</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="createRecipe">Créer un évèmenent :</string>
 
 </resources>
