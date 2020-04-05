@@ -29,4 +29,16 @@
     <string name="language">language</string>
     <string name="difficulty">difficulty</string>
     <string name="userLogIn">User</string>
+    <string name="usernamestar">UserName*</string>
+    <string name="nameStar">Name*</string>
+    <string name="emailStar">Email*</string>
+    <string name="personal_description">Personal Description</string>
+    <string name="url_photo">URL photo</string>
+    <string name="birthday_dd_mm_yyyy">Birthday DD/MM/YYYY</string>
+    <string name="select_language">Select language</string>
+    <string name="en">EN</string>
+    <string name="fr">FR</string>
+    <string name="it">IT</string>
+    <string name="register">Register</string>
+    <string name="password_do_not_use_usual_password_n_we_did_not_set_protection_yet">Password* do not use usual password\n(we did not set protection yet)</string>
 </resources>

@@ -30,4 +30,7 @@
     <string name="language">lingua</string>
     <string name="difficulty">difficoltà</string>
     <string name="userLogIn">Utente</string>
+    <string name="en">EN</string>
+    <string name="fr">FR</string>
+    <string name="it">IT</string>
 </resources>

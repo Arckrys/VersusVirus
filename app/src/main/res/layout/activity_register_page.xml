@@ -10,98 +10,98 @@
         android:id="@+id/textInputLayout"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="1dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="UserName*" />
+            android:hint="@string/usernamestar" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name*"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-        tools:layout_editor_absoluteX="-1dp" />
+        android:hint="@string/nameStar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email*"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        tools:layout_editor_absoluteX="1dp" />
+        android:hint="@string/emailStar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/personalDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Personal Description"
-        app:layout_constraintTop_toBottomOf="@+id/birthday"
-        tools:layout_editor_absoluteX="0dp" />
+        android:hint="@string/personal_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/birthday" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/url"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="URL photo"
-        app:layout_constraintTop_toBottomOf="@+id/personalDescription"
-        tools:layout_editor_absoluteX="1dp" />
+        android:hint="@string/url_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/personalDescription" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/birthday"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Birthday DD/MM/YYYY"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:layout_editor_absoluteX="1dp" />
+        android:hint="@string/birthday_dd_mm_yyyy"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="411dp"
         android:layout_height="35dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/email"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email">
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Selec language " />
+            android:text="@string/select_language" />
 
         <CheckBox
             android:id="@+id/enBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="EN" />
+            android:text="@string/en" />
 
         <CheckBox
             android:id="@+id/frBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="FR" />
+            android:text="@string/fr" />
 
         <CheckBox
             android:id="@+id/itBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="IT" />
+            android:text="@string/it" />
     </LinearLayout>
 
     <Button
         android:id="@+id/registerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:text="@string/register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -112,8 +112,8 @@
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Password*"
-        app:layout_constraintTop_toBottomOf="@+id/url"
-        tools:layout_editor_absoluteX="1dp" />
+        android:hint="@string/password_do_not_use_usual_password_n_we_did_not_set_protection_yet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/url" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
