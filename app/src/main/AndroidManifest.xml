@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".ShoppingList"></activity>
+        <activity android:name=".RegisterPage"></activity>
+        <activity android:name=".ShoppingList" />
         <activity android:name=".LivePage" />
         <activity android:name=".ProfilPage" />
         <activity android:name=".RecipePage" />
