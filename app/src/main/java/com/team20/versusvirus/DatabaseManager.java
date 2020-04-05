@@ -98,5 +98,37 @@ public class DatabaseManager {
         userDatabase.child(username).addListenerForSingleValueEvent(listener);
     }
 
+    public void changePwd(final Context context, final User user, final String newPwd) {
+        ValueEventListener listener = new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                User fetchedUser = dataSnapshot.getValue(User.class);
+
+                if(fetchedUser == null) {
+                    Toast.makeText(context, "Error ! The user does not exist", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(context, "The password was changed !", Toast.LENGTH_SHORT).show();
+                    // We pass a user instance as a json-formatted string
+                    Gson gson = new Gson();
+                    user.password = newPwd;
+
+                    userDatabase.child(user.username).child("password").setValue(newPwd);
+
+                    String jsonUser = gson.toJson(user);
+                    Intent intent = new Intent(context, ProfilPage.class);
+                    intent.putExtra("user", jsonUser);
+                    context.startActivity(intent);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(context, "The registration request was cancelled", Toast.LENGTH_SHORT).show();
+            }
+        };
+
+        userDatabase.child(user.username).addListenerForSingleValueEvent(listener);
+    }
+
 }
 
