@@ -32,7 +32,7 @@ public class ProfilPage extends AppCompatActivity {
         EditText editTextDesc = findViewById(R.id.editText);
         editTextDesc.setText(user.description);
 
-        if(!user.photo.equals("")){
+        if (!user.photo.equals("")) {
             new DownloadImageTask((ImageView) findViewById(R.id.profileImage)).execute(user.photo);
         }
 
@@ -53,7 +53,7 @@ public class ProfilPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        
+
         Button changePwd = findViewById(R.id.changePassword);
         changePwd.setOnClickListener(
                 new View.OnClickListener() {
@@ -76,6 +76,5 @@ public class ProfilPage extends AppCompatActivity {
             }
         });
 
-    }
     }
 }
