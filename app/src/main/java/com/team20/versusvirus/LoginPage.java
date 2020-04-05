@@ -1,48 +1,48 @@
 package com.team20.versusvirus;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
-import java.sql.Timestamp;
+import com.google.firebase.FirebaseError;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.security.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Arrays;
+
+import com.team20.versusvirus.DatabaseManager;
 
 public class LoginPage extends AppCompatActivity {
 
-    public class Ingredient{
-        public Integer Id_ingredient;
-        public Double Quantity;
-        public String Quantifier, Type, name;
+    private DatabaseManager dbmanager = new DatabaseManager();
 
-    }
-    public class  Recipe{
-        public Integer Id_Recipe,prepTim,cookTime,difficulty;
-        public String image,title, Language,description;
-        public Timestamp Date;
-        public List<Ingredient> Ingredients;
-        public List<String> Steps;
-
-
-    }
-    public class User{
-        public String description, Password, username, email, name, birthday, Photo, Langue;
-        public List<Recipe> UpcomingRecipe, CreatedRecipe, PastRecipe;
-        public List<String> Friends_id;
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_page);
+
         Button connexionButton = findViewById(R.id.connexionButton);
         connexionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginPage.this, Homepage.class);
-                startActivity(intent);
+                EditText username = findViewById(R.id.emailEditText);
+                EditText pwd = findViewById(R.id.passwordEditText);
+                // Fetch username in database and change activity if succeded
+                dbmanager.getUser(LoginPage.this,
+                        username.getText().toString(), pwd.getText().toString());
             }
         });
 
@@ -50,7 +50,30 @@ public class LoginPage extends AppCompatActivity {
         createAccountText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(LoginPage.this, RegisterPage.class);
+                startActivity(intent);
 
+                /*
+                // You should also change the targeted activity in DatabaseManager line 62
+                // Note that the targeted activity will be transmitted a json-formatted string for the user !
+
+                // Create hard-coded user, this will be replaced when we'll have registration page
+                User user = new User(
+                        "C'est gourmant, c'est crocant.", "",
+                        "cyril", "", "Cyril Lignac", "01.01.1990",
+                        "https://production-livingdocs-bluewin-ch.imgix.net/2019/11/20/d80d7f3d-d07c-467b-815e-8910a05a0ad6.jpeg?w=1024&auto=format",
+                        "French"
+
+                );
+
+                // Check if user exists
+                // If the user exists, we will restart the activity and send the current information
+                // on the user (we can retrieve all information, no need to type everything again)
+                dbmanager.getUser(LoginPage.this, user.username, "", true);
+
+                dbmanager.writeUser(user);
+
+                */
             }
         });
     }

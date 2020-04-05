@@ -15,6 +15,10 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class RecipePage extends AppCompatActivity {
     RatingBar ratingBar1;
@@ -38,45 +42,5 @@ public class RecipePage extends AppCompatActivity {
             }
             });
 
-
-
-        //testStorage();
     }
-
-    /*private void testStorage() {
-        // Create the storage
-        FirebaseStorage storage = FirebaseStorage.getInstance();
-
-        // https://firebase.google.com/docs/storage/android/create-reference
-        // Create the reference singleton instance
-        StorageReference storageRef = storage.getReference();
-
-        // Create reference to recipe images
-        // recipe images are in the folder /img/recipe/
-        StorageReference recipeRef = storageRef.child("img/recipe");
-
-        // Reference to specific image
-        StorageReference chickenRef = recipeRef.child("chicken-cacciatore-one-pot.jpg");
-
-        final long ONE_MEGABYTE = 1024 * 1024;
-
-        chickenRef.getBytes(2 * ONE_MEGABYTE).addOnSuccessListener(
-                new OnSuccessListener<byte[]>() {
-                    @Override
-                    public void onSuccess(byte[] bytes) {
-                        Bitmap img = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-                        ImageView imgView = findViewById(R.id.imageView);
-                        imgView.setImageBitmap(img);
-                    }
-                }
-        ).addOnFailureListener(
-                new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        System.out.println("ERROR LOADING THE IMG");
-                    }
-                }
-        );
-
-    }*/
 }
