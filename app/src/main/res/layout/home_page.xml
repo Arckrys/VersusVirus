@@ -97,6 +97,7 @@
         android:id="@+id/myProfileTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
         android:text="@string/myProfile"
         app:layout_constraintStart_toEndOf="@+id/profileImage"
         app:layout_constraintTop_toBottomOf="@+id/myNameTextView" />
