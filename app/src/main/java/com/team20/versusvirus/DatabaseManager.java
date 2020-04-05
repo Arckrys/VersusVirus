@@ -59,7 +59,7 @@ public class DatabaseManager {
                 Intent intent;
                 if(checkExists) {
                     // TODO: Should replace LoginPage with RegistrationPage !!!!!!
-                    intent = new Intent(context, LoginPage.class);
+                    intent = new Intent(context, RegisterPage.class);
                     Toast.makeText(context, "The user already exists !", Toast.LENGTH_SHORT).show();
                 } else
                     intent = new Intent(context, Homepage.class);
