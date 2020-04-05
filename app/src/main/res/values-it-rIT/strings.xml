@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">VersusVirus</string>
     <string name="bonjour">Ciao</string>
     <string name="forgot_your_password">Password dimenticata</string>
     <string name="application_logo">Logo dell\'applicazione</string>
@@ -33,11 +32,21 @@
     <string name="en">EN</string>
     <string name="fr">FR</string>
     <string name="it">IT</string>
-    <string name="recipeName">nome della ricetta</string>
+    <string name="recipeName">"Nome ricetta "</string>
     <string name="dateEven">Data dell\'evento (JJ/MM/AA)</string>
     <string name="hourEven">ora dell\'evento (HH:MM)</string>
     <string name="materialNeeded">Attrezzatura richiesta (forno, miscelatore, ecc.)</string>
     <string name="duration">Tempo di preparazione</string>
     <string name="ingredients">Ingredienti</string>
     <string name="createRecipe">Crea un evento :</string>
+    <string name="usernamestar">utilizzatore</string>
+    <string name="nameStar">Nome*</string>
+    <string name="emailStar">Email*</string>
+    <string name="personal_description">Descrizione Personale</string>
+    <string name="url_photo">URL foto</string>
+    <string name="birthday_dd_mm_yyyy">compleanno GG//MM/AAAA</string>
+    <string name="select_language">scegliere lingua</string>
+    <string name="register">Registrarsi</string>
+    <string name="password_do_not_use_usual_password_n_we_did_not_set_protection_yet">Password* non usare una password comune</string>
+    <string name="app_name">SocialCookingApp</string>
 </resources>
