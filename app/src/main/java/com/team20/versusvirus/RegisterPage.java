@@ -73,11 +73,7 @@ public class RegisterPage extends AppCompatActivity {
 
                 );
 
-                // TODO: should add user to database
-                
-                dbmanager.getUser(RegisterPage.this, user.username, "", true);
-
-                dbmanager.writeUser(user);
+                dbmanager.writeUser(RegisterPage.this, user);
             }
 
 

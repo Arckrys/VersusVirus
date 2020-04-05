@@ -54,9 +54,11 @@ public class LoginPage extends AppCompatActivity {
 
                 Intent intent = new Intent(LoginPage.this, RegisterPage.class);
                 startActivity(intent);
+
+                /*
                 // You should also change the targeted activity in DatabaseManager line 62
                 // Note that the targeted activity will be transmitted a json-formatted string for the user !
-                /*
+
                 // Create hard-coded user, this will be replaced when we'll have registration page
                 User user = new User(
                         "C'est gourmant, c'est crocant.", "",

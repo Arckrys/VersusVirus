@@ -29,9 +29,37 @@ public class DatabaseManager {
 
 
     // ===================== SAVE USER INTO DATABASE
-    public void writeUser(User user) {
-        String userId = user.username;
-        userDatabase.child(userId).setValue(user);
+    public void writeUser(final Context context, final User user) {
+        ValueEventListener listener = new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                User fetchedUser = dataSnapshot.getValue(User.class);
+
+                if(fetchedUser == null) {
+                    System.out.println("You should be registered");
+                    String userId = user.username;
+                    userDatabase.child(userId).setValue(user);
+                    Toast.makeText(context, "You are now registered ! You can log in.", Toast.LENGTH_SHORT).show();
+                    context.startActivity(new Intent(context, LoginPage.class));
+                } else {
+                    // The user exists and we start the register page again
+                    Toast.makeText(context, "The user already exists !", Toast.LENGTH_SHORT).show();
+                    // We pass a user instance as a json-formatted string
+                    Gson gson = new Gson();
+                    String jsonUser = gson.toJson(fetchedUser);
+                    Intent intent = new Intent(context, RegisterPage.class);
+                    intent.putExtra("user", jsonUser);
+                    context.startActivity(intent);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(context, "The registration request was cancelled", Toast.LENGTH_SHORT).show();
+            }
+        };
+
+        userDatabase.child(user.username).addListenerForSingleValueEvent(listener);
     }
 
     // ====================== GET USER FROM DATABASE & CHANGE ACTIVITY
@@ -48,7 +76,7 @@ public class DatabaseManager {
                     Toast.makeText(context, "The user does not exist :(", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                System.out.println("<MSG> Request ok ");
+
                 // Check password
                 if(!password.equals(user.password)) {
                     Toast.makeText(context, "Wrong password !", Toast.LENGTH_SHORT).show();
@@ -57,12 +85,7 @@ public class DatabaseManager {
 
                 // Change the activity: go to homepage, except if we just wanted to check if user existed
                 Intent intent;
-                if(checkExists) {
-                    // TODO: Should replace LoginPage with RegistrationPage !!!!!!
-                    intent = new Intent(context, LoginPage.class);
-                    Toast.makeText(context, "The user already exists !", Toast.LENGTH_SHORT).show();
-                } else
-                    intent = new Intent(context, Homepage.class);
+                intent = new Intent(context, Homepage.class);
                 // We pass a user instance as a json-formatted string
                 Gson gson = new Gson();
                 String jsonUser = gson.toJson(user);
