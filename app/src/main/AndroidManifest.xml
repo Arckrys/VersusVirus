@@ -17,6 +17,7 @@
         <activity android:name=".ProfilPage" />
         <activity android:name=".RecipePage" />
         <activity android:name=".Homepage" />
+        <activity android:name=".ChangePwdPage" />
         <activity android:name=".LoginPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

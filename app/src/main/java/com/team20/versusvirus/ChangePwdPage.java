@@ -18,6 +18,7 @@ public class ChangePwdPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_change_pwd);
 
         // ============= RETRIEVE USER
         Gson gson = new Gson();
@@ -27,20 +28,27 @@ public class ChangePwdPage extends AppCompatActivity {
             return;
         }
 
-        EditText editTextCurrentPwd = findViewById(R.id.editTextCurrentPwd);
-        EditText editTextNewPwd = findViewById(R.id.editTextNewPwd);
-        EditText editTextConfirmPwd = findViewById(R.id.editTextConfirmPwd);
-
-        String currentPwd = editTextCurrentPwd.getText().toString();
-        String newPwd = editTextNewPwd.getText().toString();
-        String confirmPwd = editTextConfirmPwd.getText().toString();
+        final EditText editTextCurrentPwd = findViewById(R.id.editTextCurrentPwd);
+        final EditText editTextNewPwd = findViewById(R.id.editTextNewPwd);
+        final EditText editTextConfirmPwd = findViewById(R.id.editTextConfirmPwd);
 
         Button confirm = findViewById(R.id.buttonConfirmChangePwd);
         confirm.setOnClickListener(
             new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //dbmanager.
+
+                    final String currentPwd = editTextCurrentPwd.getText().toString();
+                    final String newPwd = editTextNewPwd.getText().toString();
+                    final String confirmPwd = editTextConfirmPwd.getText().toString();
+                    System.out.println("<MSG> " + currentPwd + "*" + user.password);
+                    if(newPwd.equals(confirmPwd)) {
+                        if(currentPwd.equals(user.password))
+                            dbmanager.changePwd(ChangePwdPage.this, user, newPwd);
+                        else
+                            Toast.makeText(ChangePwdPage.this, "The current password is wrong", Toast.LENGTH_SHORT).show();
+                    } else
+                        Toast.makeText(ChangePwdPage.this, "The passwords do not match !", Toast.LENGTH_SHORT).show();
                 }
             }
         );

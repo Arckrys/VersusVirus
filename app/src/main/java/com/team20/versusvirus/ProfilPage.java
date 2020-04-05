@@ -59,5 +59,19 @@ public class ProfilPage extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button changePwd = findViewById(R.id.changePassword);
+        changePwd.setOnClickListener(
+            new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(ProfilPage.this, ChangePwdPage.class);
+                    Gson gson = new Gson();
+                    String jsonUser = gson.toJson(user);
+                    intent.putExtra("user", jsonUser);
+                    startActivity(intent);
+                }
+            }
+        );
     }
 }
