@@ -50,8 +50,6 @@ public class LoginPage extends AppCompatActivity {
         createAccountText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 Intent intent = new Intent(LoginPage.this, RegisterPage.class);
                 startActivity(intent);
 
@@ -75,8 +73,7 @@ public class LoginPage extends AppCompatActivity {
 
                 dbmanager.writeUser(user);
 
-
-                 */
+                */
             }
         });
     }

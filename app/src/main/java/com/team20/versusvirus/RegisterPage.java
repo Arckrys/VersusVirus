@@ -18,14 +18,9 @@ public class RegisterPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_page);
 
-
-
-
-
         final CheckBox enBox = (CheckBox) findViewById(R.id.enBox);
         final CheckBox frBox = (CheckBox) findViewById(R.id.frBox);
         final CheckBox itBox = (CheckBox) findViewById(R.id.itBox);
-
 
         Button registerButton = findViewById(R.id.registerButton);
         registerButton.setOnClickListener(new View.OnClickListener() {
@@ -72,8 +67,8 @@ public class RegisterPage extends AppCompatActivity {
                         urlstr,langauge
 
                 );
-
                 dbmanager.writeUser(RegisterPage.this, user);
+
             }
 
 
