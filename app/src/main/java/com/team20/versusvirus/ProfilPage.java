@@ -37,14 +37,6 @@ public class ProfilPage extends AppCompatActivity {
         }
 
         // ========= CHANGE ACTIVITY
-        Button backButton = findViewById(R.id.backButton);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ProfilPage.this, Homepage.class);
-                startActivity(intent);
-            }
-        });
         Button disconnectButton = findViewById(R.id.disconnectButton);
         disconnectButton.setOnClickListener(new View.OnClickListener() {
             @Override
