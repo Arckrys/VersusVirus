@@ -28,5 +28,7 @@
     <string name="join_the_event">Rejoindre l\'évènement</string>
     <string name="username">CuisinierAdministrateur</string>
     <string name="language">langue</string>
+    <string name="difficulty">difficulté</string>
+    <string name="userLogIn">Utilisateur</string>
 
 </resources>

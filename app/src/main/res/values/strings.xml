@@ -28,4 +28,5 @@
     <string name="username">CookingAdmin</string>
     <string name="language">language</string>
     <string name="difficulty">difficulty</string>
+    <string name="userLogIn">User</string>
 </resources>
