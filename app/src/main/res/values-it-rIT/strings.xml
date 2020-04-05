@@ -28,4 +28,6 @@
     <string name="join_the_event">"Raggiungi cucina "</string>
     <string name="username">Amministratore cucina</string>
     <string name="language">lingua</string>
+    <string name="difficulty">difficoltà</string>
+    <string name="userLogIn">Utente</string>
 </resources>
