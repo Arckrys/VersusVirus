@@ -64,10 +64,6 @@ public class DatabaseManager {
 
     // ====================== GET USER FROM DATABASE & CHANGE ACTIVITY
     public void getUser(final Context context, String username, final String password) {
-        getUser(context, username, password, false);
-    }
-
-    public void getUser(final Context context, String username, final String password, final Boolean checkExists) {
         ValueEventListener listener = new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
