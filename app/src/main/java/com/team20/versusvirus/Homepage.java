@@ -20,6 +20,9 @@ public class Homepage extends AppCompatActivity {
         Gson gson = new Gson();
         final User user = gson.fromJson(getIntent().getStringExtra("user"), User.class);
 
+        // ========= UPDATE USER INFORMATION
+        TextView textViewUsername = findViewById(R.id.myNameTextView);
+        textViewUsername.setText(user.name);
 
         // ============== SET ACTIONS
         ImageView nextRecipeImage = findViewById(R.id.nextRecipeImage);
