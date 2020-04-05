@@ -21,4 +21,5 @@ Online Hackaton to fight Covid-19-related issues.
 <p float="left">
   <img src="res/login.png" width="200" /> 
   <img src="res/profile.png" width="200" />
+  <img src="res/create_account.png" width="200" />
 </p>
